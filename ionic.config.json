@@ -1,0 +1,8 @@
+{
+  "name": "AuthenticationExample",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "90450249"
+}
