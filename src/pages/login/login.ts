@@ -45,13 +45,22 @@ export class LoginPage {
     });
   }
 
-  tryFacebookLogin(){
+  tryFacebookLogin() {
     this.authProvider.doFacebookLogin()
     .then((res) => {
       this.navCtrl.push('UserPage');
     }, (err) => {
       this.errorMessage = err.message;
     });
+  }
+
+  tryGoogleLogin() {
+    this.authProvider.doGoogleLogin()
+    .then(res => {
+      this.navCtrl.push('UserPage');
+    }, err => {
+      this.errorMessage = err.message;
+    })
   }
 
   goRegisterPage() {

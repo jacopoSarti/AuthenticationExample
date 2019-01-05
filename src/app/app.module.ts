@@ -17,6 +17,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 
 import { Facebook } from '@ionic-native/facebook';
+import { GooglePlus } from '@ionic-native/google-plus';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { Facebook } from '@ionic-native/facebook';
     AuthProvider,
     UserProvider,
     Facebook,
+    GooglePlus,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
