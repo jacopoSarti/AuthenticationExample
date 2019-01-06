@@ -23,4 +23,8 @@ page-user {
           color: #000;
         }
     }  
+
+    .fab {
+        @include fab-styles(color($colors, primary, base));
+    }
 }

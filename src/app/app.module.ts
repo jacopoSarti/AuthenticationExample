@@ -14,6 +14,7 @@ import { UserProvider } from '../providers/user/user';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 
 import { Facebook } from '@ionic-native/facebook';
@@ -30,7 +31,8 @@ import { GooglePlus } from '@ionic-native/google-plus';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -46,6 +48,7 @@ import { GooglePlus } from '@ionic-native/google-plus';
     UserProvider,
     Facebook,
     GooglePlus,
+    AngularFireDatabase,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
