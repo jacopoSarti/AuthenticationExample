@@ -30,7 +30,7 @@ export class LoginPage {
   ionViewWillLoad() {
     this.loginForm = this.formBuilder.group({
       email: new FormControl(),
-      password: new FormControl()
+      password: new FormControl() 
     });
   }
 

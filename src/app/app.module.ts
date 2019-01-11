@@ -5,9 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-// import { LoginPage } from '../pages/login/login';
-// import { RegisterPage } from '../pages/register/register';
-// import { UserPage } from '../pages/user/user';
 
 import { AuthProvider } from '../providers/auth/auth';
 import { UserProvider } from '../providers/user/user';
@@ -19,13 +16,11 @@ import { environment } from '../environments/environment';
 
 import { Facebook } from '@ionic-native/facebook';
 import { GooglePlus } from '@ionic-native/google-plus';
+import { FirebaseProvider } from '../providers/firebase/firebase';
 
 @NgModule({
   declarations: [
     MyApp,
-    // LoginPage,
-    // RegisterPage,
-    // UserPage
   ],
   imports: [
     BrowserModule,
@@ -36,16 +31,14 @@ import { GooglePlus } from '@ionic-native/google-plus';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    // LoginPage,
-    // RegisterPage,
-    // UserPage
+    MyApp
   ],
   providers: [
     StatusBar,
     SplashScreen,
     AuthProvider,
     UserProvider,
+    FirebaseProvider,
     Facebook,
     GooglePlus,
     AngularFireDatabase,

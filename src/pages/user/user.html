@@ -7,26 +7,27 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>user</ion-title>
+    <ion-title>User</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content class="card-background-page" padding>
+
   <ion-grid text-center>
     <ion-row>
-      <ion-col text-center col-6 col-md-4 col-lg-3 *ngFor="let number of [0,1,2,3,4]">
+      <ion-col text-center col-6 col-md-4 col-lg-3 *ngFor="let coupon of coupons">
         <ion-card>
           <img src="../../assets/imgs/logo.png"/>
-          <div class="card-title">São Paulo</div>
-          <div class="card-subtitle">41 Listings</div>
+          <div class="card-title">{{coupon.name}}</div>
+          <div class="card-subtitle">{{coupon.id}}</div>
         </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
 
   <ion-fab right bottom padding>
-    <button ion-fab class="fab"><ion-icon name="add"></ion-icon></button>
+    <button ion-fab class="fab" (click)="addCoupon()"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
 </ion-content>
